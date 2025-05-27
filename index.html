@@ -6,6 +6,7 @@
     <title>SkillUnits_</title>
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/adaptive.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +14,14 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="scripts/message.js"></script>
+    <script src="scripts/swiper.js" type="module"></script>
   </head>
   <body>
     <nav>
@@ -21,18 +29,19 @@
       <a class="start-button" href="/">Начать курс</a>
     </nav>
     <header>
-      <img class="bg-arrow" src="images/Arrow_03.svg" alt="" />
       <img class="bg-star-1" src="images/star-sm.svg" alt="" />
       <img class="bg-star-2" src="images/star-md.svg" alt="" />
       <img class="bg-star-3" src="images/star-lg.svg" alt="" />
-      <div class="header-circle-gradient"></div>
 
       <div class="header-left">
+        <div class="header-circle-gradient"></div>
         <h1>
+          <img class="bg-arrow" src="images/Arrow_03.svg" alt="" />
           Бесплатный курс трейдинга от <br />
           топовых трейдеров <br />
           мира
         </h1>
+        <img class="header-mobile-img" src="images/header-image.png" alt="" />
         <p>
           <span class="accent">До 80% ROI на лонгах и 70% на шортах</span
           ><br />Это не теоретические цифры — это реальные результаты тех, кто
@@ -47,11 +56,15 @@
     <main>
       <section>
         <h2>Что внутри курса?</h2>
-        <p>
-          Мы не просто рассказываем о трейдинге —
-          <span class="accent">мы пошагово учим зарабатывать.</span> За 1,5
-          недели ты освоишь мощные инструменты, с которыми начинают зарабатывать
-          даже те, кто никогда раньше не открывал графики.
+        <p class="mobile-text-container">
+          <span class="text-right">
+            Мы не просто рассказываем о трейдинге —
+            <span class="accent">мы пошагово учим зарабатывать.</span>
+          </span>
+          <span class="mobile-block"
+            >За 1,5 недели ты освоишь мощные инструменты, с которыми начинают
+            зарабатывать даже те, кто никогда раньше не открывал графики.</span
+          >
         </p>
 
         <div class="cards">
@@ -166,7 +179,6 @@
           Обучают <span class="accent">практики</span> с мировым именем и годами
           опыта в реальном трейдинге
         </p>
-
         <div class="mentors">
           <div class="mentor-card">
             <div class="mentor-bg-ellipse"></div>
@@ -224,18 +236,78 @@
         </div>
       </section>
 
-      <section>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="mentor-card">
+              <div class="mentor-bg-ellipse"></div>
+              <div
+                class="mentor-image"
+                style="background-image: url(../images/mentor-1.png)"
+              >
+                <div class="mentor-card-container">
+                  <h3>Алексей Горин</h3>
+                  <p>
+                    Специализация: Лонги <br />
+                    Опыт: 9 лет на фондовом и крипторынке
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mentor-card">
+              <div class="mentor-bg-ellipse"></div>
+              <div
+                class="mentor-image"
+                style="
+                  background-image: url(../images/mentor-2.png);
+                  background-size: 200%;
+                  background-position: 40% 0;
+                "
+              >
+                <div class="mentor-card-container" style="padding-right: 8px">
+                  <h3>Никита Сафронов</h3>
+                  <p>
+                    Специализация: Шорты <br />
+                    Опыт: 7 лет, бывший риск-аналитик в хедж-фонде
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="mentor-card">
+              <div class="mentor-bg-ellipse"></div>
+              <div
+                class="mentor-image"
+                style="
+                  background-image: url(../images/mentor-3.png);
+                  background-size: 210%;
+                  background-position: center 10%;
+                "
+              >
+                <div class="mentor-card-container">
+                  <h3>Артём Коваль</h3>
+                  <p>
+                    Специализация: Связки стратегий <br />
+                    Опыт: 10+ лет в трейдинге, ex-проп-трейдер
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="start-section">
         <div class="start">
           <div class="mobile">
             <img src="images/phone.png" alt="" />
             <div id="message" class="message">
               <p>
                 Держи:
-                <a
-                  href="/"
-                  target="_blank"
-                  >Урок №1</a
-                >
+                <a href="/" target="_blank">Урок №1</a>
               </p>
             </div>
           </div>
@@ -243,7 +315,7 @@
             <p>Чтоб начать курс 👇🏻</p>
             <a href="/" target="_blank" class="start-button">
               <img src="images/Tg.png" alt="" />
-              Начинай курс сейчас
+              Переходи в наш Телеграм
             </a>
           </div>
         </div>
@@ -252,20 +324,17 @@
 
     <footer>
       <div class="footer-top">
-          <a href="mailto:skillunits@gmail.com" target="_blank"
-              >skillunits@gmail.com</a
-          >
-          <a
-              href="/"
-              target="_blank"
-          >
-              <img src="images/telegram.png" alt="" />
-          </a>
+        <a href="mailto:skillunits@gmail.com" target="_blank"
+          >skillunits@gmail.com</a
+        >
+        <a href="/" target="_blank">
+          <img src="images/telegram.png" alt="" />
+        </a>
       </div>
       <div class="footer-mid">
-          <p>SkillUnits_</p>
+        <p>SkillUnits_</p>
       </div>
       <p class="copyright">©2025</p>
-  </footer>
+    </footer>
   </body>
 </html>
